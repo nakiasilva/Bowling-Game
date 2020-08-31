@@ -12,6 +12,9 @@ class BowlingGame:
         self.play_strike = False
         self.play_spare = False
 
+    '''
+    This method updates the scoreboard after first trial
+    '''
     def setScoreFirstTrial(self, pins):
         try:
             self.score_board.append([0] * 2)
@@ -28,6 +31,10 @@ class BowlingGame:
         except Exception:
             print("Error occured in setScoreFirstTrial(): ",  str(e))
 
+
+    '''
+    This method updates the scoreboard after second trial
+    '''
     def setScoreSecondTrial(self, pins):
         try:
             self.first_trial = True
@@ -42,6 +49,9 @@ class BowlingGame:
             print("Error occured in setScoreFirstTrial(): ",  str(e))
 
 
+    '''
+    This method check if the last frame was a strike or spare
+    '''
     def checkLastFrameVal(self):
         try:
             if self.frame_no == 10:
@@ -61,8 +71,12 @@ class BowlingGame:
             print("Index Error occured in setScoreFirstTrial(): ", str(e))
         except checkLastFrameValError:
             print("Error occured in checkLastFrameVal(): ", str(e))
-            
 
+
+    '''
+    This method is used to play the game and update make 
+    calls to update the scoreboard
+    '''
     def roll(self, pins):
         try:
             if self.frame_no > 10:
@@ -85,7 +99,9 @@ class BowlingGame:
         except MaxFrameExceededError as e:
             print("Maximun number of frames (10) exceeded: ", str(e))
 
-
+    '''
+    This method returns the score of the game
+    '''
     def score(self):
         try:
             total_score = 0
