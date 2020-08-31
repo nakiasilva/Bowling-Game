@@ -92,12 +92,12 @@ class BowlingGame:
             board = self.score_board
             bonus1 = 0
             bonus2 = 0
-            if self.all_strike:
-                total_score = self.all_strike_score
-                return
+            if self.all_strike and self.frame_no > 9:
+                return self.all_strike_score
             for i in  range(len(board)):
                 if i == len(board) - 1:
-                    if not (self.play_strike or self.play_spare):
+                    # if not (self.play_strike or self.play_spare) and self.frame_no < 11:
+                    if self.frame_no < 10:
                         score = board[i][0] + board[i][1]
                     else:
                         score = 0
@@ -114,8 +114,6 @@ class BowlingGame:
                 else:
                     score = board[i][0] + board[i][1]
                 total_score = total_score + score
-            print(total_score)
-            print(self.score_board)
             return total_score
         except IndexError as e:
             print("Index Error occured in score(): ", str(e))
