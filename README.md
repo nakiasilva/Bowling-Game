@@ -36,7 +36,7 @@
     
 - To play the game, type commands in UserInterface.py </br>
    Bowl: </br>
-  `player.bowlingGame.roll(no_of_pins)'
+  `player.bowlingGame.roll(no_of_pins)`
   
    To check score:</br>
    `score = player.bowlingGame.score()`
