@@ -12,8 +12,11 @@
 ## Introduction
  
  > This project provides a solution to the facilate the features mentioned in <a href="https://github.com/nakiasilva/Bowling-Game/blob/master/TASK" target="_blank">task</a>  file.
+ 
  > The project is coded in Python
+ 
  > Custom exceptions are created wherever required.
+ 
  > Testing: TDD was employed while writing the test cases for each functionalities.
  
  
