@@ -34,13 +34,14 @@
 - Run the below command through CLI </br>
     `python UserInterface.py`
     
-- To play the game, type commands in UserInterface.py
-   Bowl:
+- To play the game, type commands in UserInterface.py </br>
+   Bowl: </br>
   `player.bowlingGame.roll(no_of_pins)'
-   To check score:
+  
+   To check score:</br>
    `score = player.bowlingGame.score()`
    
-- To run test cases run the below command
+- To run test cases run the below command </br>
   ` python test.py`
 
 
