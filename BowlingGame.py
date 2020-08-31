@@ -96,7 +96,6 @@ class BowlingGame:
                 return self.all_strike_score
             for i in  range(len(board)):
                 if i == len(board) - 1:
-                    # if not (self.play_strike or self.play_spare) and self.frame_no < 11:
                     if self.frame_no < 10:
                         score = board[i][0] + board[i][1]
                     else:
